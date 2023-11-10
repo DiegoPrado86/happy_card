@@ -1,0 +1,62 @@
+@use 'variaveis';
+
+.niver {
+    padding: 80px 0;
+
+    &--doce {
+        background-image: linear-gradient(variaveis.$purple, variaveis.$pink);
+    }
+
+    &--aventura {
+        background-image: linear-gradient(variaveis.$pink, variaveis.$purple);
+    }
+
+    &--brincadeira {
+        background-image: linear-gradient(variaveis.$purple, variaveis.$pink);
+    }
+
+    &--sonho {
+        background-image: linear-gradient(variaveis.$pink, variaveis.$purple);
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;   
+    }
+
+    &__image {
+        max-width: 200px;
+    }
+
+    &__details {
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            color: variaveis.$textColor;
+            margin-bottom: 16px;
+            border-bottom: solid 1px rgb(247, 238, 239);
+            display: inline-block;
+        }
+
+        &__description {
+            line-height: 22px;
+            color: variaveis.$textColor;
+        }
+    }
+
+    @media( max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            max-width: 100%;
+        }
+    }
+}

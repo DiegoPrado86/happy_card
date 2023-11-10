@@ -1,0 +1,48 @@
+@use '../variaveis.scss';
+
+.infos-bar {
+    padding: 14px 24px;
+    background-color: variaveis.$colorDoBackground;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+
+    &__infos {
+        display: flex;
+        gap: 40px;
+
+        &__item {
+            font-size: 14px;
+            color: variaveis.$secondaryColor;
+    
+            b {
+                color: variaveis.$secondaryColor;
+                font-size: 18px;
+                display: block;
+            }
+        
+        }
+    }
+
+    
+
+    
+    @media( max-width: 640px ) {
+        display: block;
+
+        &__infos {
+            display: block;
+
+            &__item{
+                margin-bottom: 24px;
+                gap: 5px;
+            }
+        }
+    }
+
+    @media ( max-width: 1024px) {
+        &__infos {
+            gap: 16px;
+        }
+    }
+}
